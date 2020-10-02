@@ -50,10 +50,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adobe/redux-saga-promise.git"
+    "url": "git+https://github.com/edstories/redux-saga-promise.git"
   },
   "bugs": {
-    "url": "https://github.com/adobe/redux-saga-promise/issues"
+    "url": "https://github.com/edstories/redux-saga-promise/issues"
   },
-  "homepage": "https://github.com/adobe/redux-saga-promise#readme"
+  "homepage": "https://github.com/edstories/redux-saga-promise#readme"
 }

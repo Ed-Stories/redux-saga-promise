@@ -42,7 +42,7 @@ export class ConfigurationError extends Error {}
 // the promise.
 //
 export function createPromiseAction (prefix, payloadCreator, metaCreator) {
-  const createStage = (type, payloadCreator, metaCreator) => createAction(`${prefix}.${type}`, payloadCreator, metaCreator)
+  const createStage = (type, payloadCreator, metaCreator) => createAction(`${prefix}/${type}`, payloadCreator, metaCreator)
   const resolvedAction = createStage('RESOLVED')
   const rejectedAction = createStage('REJECTED')
   const trigger        = createStage('TRIGGER', payloadCreator, (...args) => merge(metaCreator?.(...args), { promise: { resolvedAction, rejectedAction } }))

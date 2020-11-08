@@ -1,5 +1,5 @@
 {
-  "name": "@edstories/redux-saga-promise",
+  "name": "@Ed-Stories/redux-saga-promise",
   "version": "1.1.3",
   "description": "Create actions that return promises, which are resolved/rejected by a redux saga",
   "main": "dist/index.js",
@@ -50,10 +50,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/edstories/redux-saga-promise.git"
+    "url": "git+https://github.com/Ed-Stories/redux-saga-promise.git"
   },
   "bugs": {
-    "url": "https://github.com/edstories/redux-saga-promise/issues"
+    "url": "https://github.com/Ed-Stories/redux-saga-promise/issues"
   },
-  "homepage": "https://github.com/edstories/redux-saga-promise#readme"
+  "homepage": "https://github.com/Ed-Stories/redux-saga-promise#readme"
 }

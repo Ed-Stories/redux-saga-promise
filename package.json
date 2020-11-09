@@ -9,7 +9,8 @@
   "scripts": {
     "build": "npx babel src --out-dir dist",
     "start": "npx babel src --watch --out-dir dist",
-    "test": "npm run build && ava"
+    "test": "npm run build && ava",
+    "prepublish": "yarn build"
   },
   "keywords": [
     "redux",

@@ -1,6 +1,6 @@
 {
   "name": "@ed-stories/redux-saga-promise",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Create actions that return promises, which are resolved/rejected by a redux saga",
   "main": "dist/index.js",
   "publishConfig": {

@@ -1,0 +1,135 @@
+{
+  "extends": ["prettier"],
+  "parser": "babel-eslint",
+  "plugins": ["@typescript-eslint", "prettier", "import"],
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "globals": {
+    "__DEVELOPMENT__": true,
+    "__STAGING_API__": true,
+    "__ENVIRONMENT__": true,
+    "socket": true
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts?(x)"],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module",
+        "warnOnUnsupportedTypeScriptVersion": true
+      },
+      "rules": {
+        "no-unused-vars": "off",
+        "no-useless-constructor": "off",
+        "no-empty-function": "off",
+
+        "@typescript-eslint/no-unused-vars": ["error", { "args": "none" }],
+        "@typescript-eslint/no-useless-constructor": ["error"]
+      }
+    }
+  ],
+  "rules": {
+    "no-console": "warn",
+    "no-debugger": "warn",
+    "arrow-parens": "error",
+    "no-shadow": "off",
+    "no-bitwise": [
+      "error",
+      {
+        "allow": ["~"]
+      }
+    ],
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "no-empty": [
+      "error",
+      {
+        "allowEmptyCatch": true
+      }
+    ],
+    "lines-between-class-members": [
+      "error",
+      "always",
+      { "exceptAfterSingleLine": true }
+    ],
+    "max-len": [
+      "error",
+      120,
+      2,
+      {
+        "ignoreUrls": true,
+        "ignoreComments": false,
+        "ignoreRegExpLiterals": false,
+        "ignoreStrings": false,
+        "ignoreTemplateLiterals": false
+      }
+    ],
+    "object-curly-newline": [
+      "error",
+      {
+        "ObjectExpression": {
+          "multiline": true,
+          "consistent": true
+        },
+        "ObjectPattern": {
+          "multiline": true,
+          "consistent": true
+        },
+        "ImportDeclaration": {
+          "multiline": true,
+          "consistent": true
+        },
+        "ExportDeclaration": {
+          "multiline": true,
+          "consistent": true
+        }
+      }
+    ],
+
+    "import/extensions": [
+      "error",
+      {
+        "ts": "never",
+        "tsx": "never",
+        "json": "always",
+        "scss": "always"
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.test.ts",
+          "**/*.test.tsx",
+          "webpack/*.js",
+          "api/*.js",
+          "src/server.js",
+          "src/redux/create.js"
+        ],
+        "optionalDependencies": false,
+        "peerDependencies": false
+      }
+    ],
+    "import/prefer-default-export": ["off"],
+    "prettier/prettier": "error",
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": ["const", "let"], "next": "*" },
+      { "blankLine": "always", "prev": "multiline-block-like", "next": "*" },
+      { "blankLine": "never", "prev": "multiline-block-like", "next": "case" },
+      { "blankLine": "any", "prev": ["const", "let"], "next": ["const", "let"] }
+    ]
+  }
+}

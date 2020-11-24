@@ -1,0 +1,14 @@
+{
+  "trailingComma": "all",
+  "singleQuote": true,
+  "printWidth": 120,
+  "parser": "typescript",
+  "overrides": [
+    {
+      "files": "*.scss",
+      "options": {
+        "parser": "scss"
+      }
+    }
+  ]
+}
